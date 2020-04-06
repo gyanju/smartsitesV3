@@ -1,0 +1,140 @@
+.team-single-banner {
+	background-color: $primary;
+
+	@include media-breakpoint-up(xl) {
+		min-height: 92vh;
+	}
+
+	&__title-wrap {
+		@include media-breakpoint-up(xl) {
+			min-height: 92vh;
+		}
+
+		h1 {
+			font-weight: 600;
+			line-height: 1;
+		}
+
+		p {
+			margin: 0;
+			font-weight: 600;
+
+			@include media-breakpoint-up(xl) {
+				@include font-size(1.875rem)
+			}
+		}
+	}
+}
+
+.team-single {
+	&__info {
+		margin-top: -170px;
+		background: $twilight-blue;
+		box-shadow: 0 0 25px 5px rgba(0, 0, 0, .2);
+		border-radius: 10px;
+		overflow: hidden;
+
+		@include media-breakpoint-up(xl) {
+			margin-left: 2.3rem;
+		}
+
+		.item {
+			color: $white;
+			padding: 1rem;
+			display: flex;
+			align-items: center;
+
+			@include media-breakpoint-up(xl) {
+				padding: 1.6rem 1.6rem;
+			}
+
+			&:nth-child(2),
+			&:last-child {
+				background-color: rgba($black, 0.1);
+			}
+
+			>i {
+				margin-right: 1.2rem;
+
+				@include media-breakpoint-up(xl) {
+					font-size: 2.8rem;
+				}
+			}
+
+			ul {
+				list-style: none;
+				padding-left: 0;
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				overflow: hidden;
+				justify-content: space-between;
+				width: 100%;
+				margin: -2.3rem 0 0;
+
+				li {
+					border-bottom: 1px solid $white;
+					border-right: 1px solid $white;
+					margin: -1px;
+					text-align: center;
+					padding: 1.2rem 0.5rem;
+
+					@include media-breakpoint-up(lg) {
+						max-width: 50%;
+						flex-basis: 50%;
+					}
+
+					i,
+					span {
+						display: block;
+					}
+
+					i {
+						margin-bottom: 0.7rem;
+
+						@include media-breakpoint-up(xl) {
+							font-size: 3.3rem;
+						}
+					}
+
+					span {
+						@include media-breakpoint-up(xl) {
+							font-size: 1.375rem;
+						}
+					}
+				}
+			}
+
+			.btn {
+				width: 100%;
+			}
+
+			&--interest {
+				padding: 1.6rem 2.9rem 0.5rem;
+			}
+
+			&--hire {
+				padding: 1.6rem 1.1rem;
+			}
+		}
+
+		.text-holder {
+			h6 {
+				font-weight: 700;
+				margin-bottom: 0;
+
+				@include media-breakpoint-up(xl) {
+					@include font-size(1.875rem);
+				}
+			}
+
+			span {
+				@include font-size(1rem);
+
+				@include media-breakpoint-up(xl) {
+					@include font-size(1.375rem);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+// Background Cover
+%bg-cover {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&>img {
+		display: none;
+	}
+}
+
+.bg-cover {
+	@extend %bg-cover;
+}
+
+img {
+	max-width: 100%;
+}
+
+// Text
+.text-transform-none {
+	text-transform: none !important;
+}
+
+.text-underline {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+@for $i from 1 through 9 {
+	.font-#{$i*100}{
+		font-weight: $i*100;
+	}
+}
+
+%gradient-text {
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+    display: inline-block!important;
+    background: $yellow-200;
+    background: linear-gradient(to right, $yellow-200, $yellow-300);
+    color: $yellow-200;
+
+    @media all and (-ms-high-contrast: none) {
+        background: none !important;
+    }
+}
+
+.gradient-text {
+    @extend %gradient-text
+}
+
+%font-weight-semibold {
+	font-weight: $font-weight-semibold;
+}
+
+.font-weight-semibold {
+	@extend %font-weight-semibold;
+}

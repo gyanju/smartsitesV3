@@ -1,0 +1,44 @@
+html {
+	@media (min-width: 1200px) and (max-width: 1849px) {
+		font-size: 14px;
+	}
+}
+
+body {
+	min-width: 320px;
+	overflow-x: hidden;
+	margin: 0 !important;
+	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.site-wrapper {
+	overflow-x: hidden;
+}
+
+a {
+	&:focus {
+		outline: none;
+	}
+}
+
+.btn:focus,
+.form-control:focus {
+	box-shadow: none;
+}
+
+.svg,
+.svg.img-fluid {
+	width: 100%;
+	max-width: 100%;
+	background-size: cover;
+	vertical-align: middle;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.container-fluid {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}

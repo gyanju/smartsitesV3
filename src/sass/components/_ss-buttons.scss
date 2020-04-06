@@ -1,0 +1,50 @@
+.btn {
+    &-primary {
+        border-radius: 4px;
+        box-shadow: 0 12px 22px 0 rgba($black, 0.15);
+        background-image: linear-gradient(to bottom, $yellow-100, $orange-100);
+        font-size: 1.75rem;
+        color: #3b2200;
+        font-weight: bold;
+        height: 66px;
+        line-height: 1.95;
+        border: 0;
+        position: relative;
+
+        &:not(.no-arrow) {
+            padding-right: 6.25rem;
+        }
+
+        &.no-arrow {
+            &:after {
+                display: none;
+            }
+        }
+
+        &:after {
+            content: "\e914";
+            font-family: 'icomoon' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+
+            /* Better Font Rendering =========== */
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: absolute;
+            right: 0;
+            width: 4.5rem;
+            top: 0;
+            bottom: 0;
+            background: #ed780b;
+            line-height: 2;
+            font-size: 1.25rem;
+            padding: 1rem;
+            border-radius: 0 4px 4px 0;
+            border-left: 2px solid #ffc73e;
+        }
+    }
+}

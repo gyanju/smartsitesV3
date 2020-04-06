@@ -1,0 +1,149 @@
+.banner {
+    position: relative;
+    max-height: 100vh;
+
+    @include media-breakpoint-down(lg) {
+        background: url(#{$site-image-path}/banner-home-mobile.jpg) 35% 0 no-repeat;
+        padding-top: 6.5rem;
+        padding-bottom: 2rem;
+        background-size: cover;
+        max-height: 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        max-height: 100%;
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding-top: 5.2rem;
+        padding-bottom: 1.2rem;
+    }
+
+    &__video {
+        position: relative;
+
+        &:before {
+            @include media-breakpoint-up(xl) {
+                content: "";
+                background: rgba($black, 0.6);
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
+        video {
+            @include media-breakpoint-up(xl) {
+                max-height: 100vh;
+            }
+
+            @include media-breakpoint-down(lg) {
+                display: none !important;
+            }
+        }
+    }
+
+    &__content {
+        text-align: center;
+        color: $white;
+        z-index: 1;
+
+        @media (max-width: 1849px) {
+            bottom: 3rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 6rem;
+            padding-top: 10rem;
+        }
+
+        h1 {
+            line-height: 1;
+            margin-bottom: 1.375rem;
+
+            @include media-breakpoint-down(lg) {
+                margin-bottom: 0.35rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                @include font-size(2.25rem);
+                margin-bottom: 0.25rem;
+            }
+
+            .font-weight-light {
+                margin-bottom: -0.25rem;
+            }
+        }
+
+        .typed-text {
+            @include media-breakpoint-down(lg) {
+                display: none;
+            }
+        }
+
+        .form__horizontal {
+            max-width: 1320px;
+            margin: 2rem auto 4.5rem;
+
+            @media (max-width: 1849px) {
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
+                margin-bottom: 3rem;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+                margin-top: 0;
+                margin-bottom: 1rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding-left: 1rem;
+                padding-right: 1rem;
+                margin-bottom: 0.3rem;
+            }
+        }
+    }
+
+    &__logos {
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 1rem;
+        }
+
+        .img-wrap {
+            padding: 0 3.125rem;
+
+            @media (max-width: 1849px) {
+                padding: 0 1.5rem;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 0.8125rem;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 0.8125rem 1rem 0.8125rem 0;
+            }
+
+            &:last-child {
+                @include media-breakpoint-down(sm) {
+                    padding-right: 0;
+                }
+            }
+
+            img {
+                @include media-breakpoint-down(lg) {
+                    max-height: 48px;
+                }
+            }
+        }
+    }
+}

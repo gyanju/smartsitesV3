@@ -1,0 +1,14 @@
+.hover-zoom {
+	position: relative;
+	overflow: hidden;
+
+	img {
+		transition: ease 0.5s;
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.2);
+		}
+	}
+}

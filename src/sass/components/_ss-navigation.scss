@@ -1,0 +1,284 @@
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @include media-breakpoint-down(xs) {
+        padding: 0 .5rem;
+    }
+
+    &-light {
+        .navbar-nav {
+            .nav-item {
+                margin-top: 0.5rem;
+
+                &:not(:first-child) {
+                    margin-left: 2.125rem;
+
+                    @media (max-width: 1849px) {
+                        margin-left: 1.5rem;
+                    }
+                }
+            }
+
+            .nav-link {
+                font-weight: 600;
+                @include font-size(1.5rem);
+            }
+        }
+
+        .click-call {
+            color: $white;
+            font-weight: 700;
+            line-height: 1;
+            margin: 0;
+            padding-top: 0.3125rem;
+            margin-left: 2.5rem;
+
+            @media (max-width: 1849px) {
+                margin-left: 1.5rem;
+            }
+
+            @include media-breakpoint-down(lg) {
+                /* use !important to prevent issues with browser extensions that change fonts */
+                font-family: 'icomoon' !important;
+                speak: none;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+
+                /* Better Font Rendering =========== */
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-size: 0;
+                margin-left: auto;
+                margin-right: 1.875rem;
+                color: $white !important;
+                background: none !important;
+                -webkit-text-fill-color: $white !important;
+
+                &:before {
+                    content: "\e936";
+                    display: block;
+                    font-size: 1.5rem;
+                }
+            }
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 1rem;
+
+                &:before {
+                    font-size: 1.3rem;
+                }
+            }
+
+            &:hover,
+            &:focus {
+                background: linear-gradient(to right, $yellow-300, $yellow-200);
+                text-decoration: none;
+            }
+        }
+    }
+
+    &-brand {
+        margin-right: 0.25rem;
+
+        img {
+            @include media-breakpoint-down(lg) {
+                max-width: 200px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                max-width: 150px;
+            }
+        }
+    }
+}
+
+button.toggle-menu-btn {
+    padding: 0;
+    font-size: 0;
+    position: relative;
+    border: 0;
+    border-radius: 0;
+    width: 32px;
+    height: 22px;
+    background: 0 0;
+    display: flex;
+    justify-content: space-between;
+    transition: .5s all ease-in-out;
+    align-items: center;
+
+    @include media-breakpoint-up(xl) {
+        display: none;
+    }
+
+    @include media-breakpoint-down(xs) {
+        width: 26px;
+        height: 18px;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: $white;
+        @include transition();
+    }
+
+    &:before {
+        top: auto;
+        bottom: 0
+    }
+
+    // &:after {
+    //     top: 8px;
+    // }
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:not(:disabled):not(.disabled):active {
+        background: 0 0;
+    }
+
+    .bar-icon {
+        display: block;
+        height: 2px;
+        width: 100%;
+        background: $white;
+        transition: .2s all ease-in-out
+    }
+}
+
+#custom-toggle-menu {
+    background: rgba(1, 33, 54, .9);
+    padding: 0 !important;
+
+    .modal-dialog {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+
+        .modal-content {
+            background: 0 0;
+        }
+    }
+
+    .modal-footer,
+    .modal-header {
+        border: 0;
+    }
+
+    .modal-header {
+        padding: 20px 20px 10px;
+
+        .close {
+            margin: 0;
+            padding: 0;
+            opacity: 1;
+
+            &:before {
+                transform: rotate(45deg);
+                bottom: 8px;
+                background: $white;
+
+                @include media-breakpoint-down(xs) {
+                    bottom: 5px;
+                }
+            }
+        }
+    }
+
+    button.toggle-menu-btn.close {
+        &:after {
+            transform: rotate(-45deg);
+            top: 8px;
+            background: $white;
+            padding: 0;
+            width: auto;
+            border: 0;
+
+            @include media-breakpoint-down(lg) {
+                top: 11px;
+            }
+        }
+    }
+
+    .top-menu {
+        margin: 0 -15px;
+        letter-spacing: -4px;
+        font-size: 0;
+        text-align: center;
+
+        .custom-col {
+            display: inline-block;
+            min-width: 160px;
+            padding: 0 15px;
+            font-size: 20px;
+            letter-spacing: 0;
+        }
+
+        .item {
+            display: block;
+            text-align: center;
+            color: $white;
+            font-size: 20px;
+            text-transform: uppercase;
+            padding: 22px 0;
+            position: relative;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    .modal-footer {
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        border-bottom: 1px solid #ccc;
+
+        .item {
+            width: 100%;
+            min-height: 85px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            color: $white;
+            font-size: 20px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 15px 10px 10px 20px;
+            text-decoration: none;
+            border-top: 1px solid #ccc;
+            background-position: 100% 0;
+
+            .text {
+                display: flex;
+                flex-wrap: wrap;
+                //align-items: center
+            }
+
+            .stars {
+                margin-left: 10px;
+                margin-top: -5px
+            }
+        }
+    }
+}
+
+.bg-repeat-x {
+    background-repeat: repeat-x;
+    background-size: auto
+}

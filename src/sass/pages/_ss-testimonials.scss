@@ -1,0 +1,282 @@
+.testimonial-hero {
+    padding: 4.5rem 0 0;
+
+    @include media-breakpoint-up(xl) {
+        padding: 11rem 0 8rem;
+    }
+
+    .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    &__content {
+        text-align: center;
+        color: $white;
+        @include font-size(1.313rem);
+        line-height: 1.52;
+        padding: 4.2rem;
+        display: none;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 4rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            display: block;
+        }
+
+        .title-wrap {
+            padding-top: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        h4 {
+            @include font-size(2.25rem);
+            font-weight: $font-weight-semibold;
+            line-height: .9;
+            margin: 0;
+        }
+
+        small {
+            @include font-size(1.5rem);
+            font-weight: $font-weight-light;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__thumbnails {
+        @include media-breakpoint-up (xl) {
+            margin-left: 1.9rem;
+        }
+
+        .nav-tabs {
+            border: 0;
+
+            .nav-item {
+                width: 16.66%;
+
+                a {
+                    position: relative;
+                    display: block;
+
+                    &:before {
+                        display: inline-block;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        left: 0;
+                        bottom: 0;
+                        height: 100%;
+                        content: '';
+                        background: rgba($marine, .5);
+                        transition: all .2s ease;
+                    }
+
+                    &.active:before,
+                    &:hover:before {
+                        background: 0 0;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.testimonial-main {
+    padding: 1rem 0 5.9rem;
+
+    @include media-breakpoint-up(sm) {
+        padding: 2.3rem 0 8.5rem;
+    }
+
+    @include media-breakpoint-up(lg) {
+        padding: 4.2rem 0 8.5rem;
+    }
+
+    .container-fluid {
+        // padding-left: 1rem;
+        // padding-right: 1rem;
+
+        @include media-breakpoint-down(md) {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+        }
+    }
+
+    h1 {
+        @include font-size(1.8rem);
+        font-weight: $font-weight-semibold;
+        line-height: 1.01;
+        color: $dark-grey;
+        text-align: center;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            @include font-size(2.8rem);
+            margin-bottom: 2rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include font-size(4.5rem);
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 4.2rem;
+        }
+    }
+
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px;
+
+        @include media-breakpoint-up(xxl) {
+            margin-right: -25px;
+            margin-left: -25px;
+        }
+    }
+
+    &__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(sm) {
+            margin-bottom: 2rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            margin-bottom: 5rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            flex: 0 0 33.33%;
+            max-width: 33.33%;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+
+        .card-body {
+            border: 1px solid darken($white, 20.00);
+            border-top-color: transparent;
+
+            @include media-breakpoint-down (md) {
+                padding: 0.65rem;
+            }
+        }
+    }
+}
+
+.testimonial-main,
+.testimonial-popup {
+
+    .avatar {
+        @include media-breakpoint-down (md) {
+            top: -45px;
+        }
+
+        img {
+            @include media-breakpoint-down (md) {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .card-title {
+        padding-top: 2.175rem;
+        margin-bottom: 1.05rem;
+
+        @include media-breakpoint-down (md) {}
+
+        h3 {
+            @include media-breakpoint-down (md) {
+                @include font-size(1.25rem);
+            }
+
+            small {
+                @include media-breakpoint-down (md) {
+                    @include font-size(1rem);
+                }
+            }
+        }
+    }
+
+    .lead-txt {
+        margin: 0 -10px 0.5rem;
+
+        @include media-breakpoint-up (lg) {
+            margin: 0 -20px 1.4rem;
+        }
+    }
+
+    .card-text {
+        @include media-breakpoint-down (md) {
+            padding-bottom: 0;
+            @include font-size(1.125rem);
+        }
+
+        p {
+            margin-bottom: 0.7rem;
+        }
+    }
+
+}
+
+.testimonial-popup {
+
+    .modal-content {
+        border: 0;
+    }
+
+    .modal-header {
+        padding: 0;
+        border: 0;
+
+        figure {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            color: $white;
+            opacity: 1;
+            z-index: 10;
+        }
+    }
+
+    .modal-body {
+        padding: 1rem;
+
+        .testimonial-card .lead-txt {
+            margin: 0 0 1rem;
+        }
+    }
+}

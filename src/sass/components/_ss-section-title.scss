@@ -1,0 +1,29 @@
+.section-title {
+	margin-bottom: 1rem;
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: 2rem;
+	}
+
+	@include media-breakpoint-up(xl) {
+		margin-bottom: 4rem;
+	}
+
+	h2 {
+		margin-bottom: 0;
+		line-height: 1;
+
+		@include media-breakpoint-up(xl) {
+			letter-spacing: -0.6px;
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		@include font-size(1.875rem);
+
+		@include media-breakpoint-up(xxl) {
+			letter-spacing: -0.5px;
+		}
+	}
+}
