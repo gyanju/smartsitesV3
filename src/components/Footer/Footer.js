@@ -194,7 +194,7 @@ export class Footer extends Component {
 								<a href="#" rel="noopener noreferrer">Company</a>
 							</li>
 							<li className="list-inline-item">
-								<a href="#" rel="noopener noreferrer">Contact Us</a>
+								<a href="#" rel="noopener noreferrer">Contact Us Test</a>
 							</li>
 						</ul>
 					</div>
